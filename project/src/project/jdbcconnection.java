@@ -1,11 +1,7 @@
 package project;
-
 import java.awt.*;
-
 import javax.swing.*;
-
 import java.awt.event.*;
-
 import java.sql.Connection; 
 import java.sql.DriverManager;  
 import java.sql.ResultSet;  
@@ -25,9 +21,11 @@ import javax.swing.table.*;
 
 public class jdbcconnection extends JFrame implements ActionListener
 {
-	public String url = "jdbc:oracle:thin:@db.ciu.edu.tr:1521:db";
-    public String username = "c##20131563";
-    public String password = "p20131563";
+ //changed part   
+    public String url=  "jdbc:oracle.thin:db.ciu.edu.tr:1521:db";
+    public String username = "c##20141562";
+    public password ="p20141562";
+    
     public jdbcconnection()
     {
         ArrayList columnNames = new ArrayList();
@@ -72,7 +70,8 @@ public class jdbcconnection extends JFrame implements ActionListener
 
         for (int i = 0; i < data.size(); i++)
         {
-            ArrayList subArray = (ArrayList)data.get(i);
+
+ArrayList subArray = (ArrayList)data.get(i);
             Vector subVector = new Vector();
             for (int j = 0; j < subArray.size(); j++)
             {
